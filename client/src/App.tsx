@@ -1,4 +1,4 @@
-/** Signal Ledger style: dark-first research dossier with a single, accessible document flow. */
+/** Personal research portfolio style: dark-first dossier with a single, accessible document flow. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";

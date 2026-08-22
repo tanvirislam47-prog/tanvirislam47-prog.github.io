@@ -1,6 +1,6 @@
 # Md. Tanvir Islam Riyad — Research Portfolio
 
-A dark-first, research-oriented personal portfolio built to document a developing practice in **AI/ML, cybersecurity, network security, IoT security, and intelligent communication systems**. The site follows the **Signal Ledger** visual system: technical editorial hierarchy, quiet blue signal accents, and a data-driven architecture that can grow with public projects and research work.
+A dark-first, research-oriented personal portfolio built to document a developing practice in **AI/ML, cybersecurity, network security, IoT security, and intelligent communication systems**. The site uses a custom **technical-editorial research portfolio** visual system: disciplined hierarchy, quiet blue signal accents, and a data-driven architecture that can grow with public projects and research work.
 
 > The portfolio deliberately distinguishes **interests and exploration** from verified achievements. It does not invent publications, awards, credentials, or project outcomes.
 

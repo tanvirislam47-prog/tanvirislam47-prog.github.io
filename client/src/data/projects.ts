@@ -69,16 +69,6 @@ export const featuredProjects: Project[] = [
     topics: ["Artificial Intelligence", "Banking", "Cybersecurity", "NLP"],
   },
   {
-    name: "University Event & Community Management System",
-    repo: "university-event-community-management-system",
-    description: "Development-ready framework for a University Event & Community Management System.",
-    domain: "Software",
-    technologies: ["Java"],
-    url: "https://github.com/tanvirislam47-prog/university-event-community-management-system",
-    language: "Java",
-    topics: ["Software"],
-  },
-  {
     name: "Atlas Knowledge Assistant",
     repo: "atlas-knowledge-assistant",
     description: "Public repository available for review on GitHub.",

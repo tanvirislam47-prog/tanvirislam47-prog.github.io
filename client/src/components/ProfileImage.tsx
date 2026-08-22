@@ -1,4 +1,4 @@
-/** Signal Ledger style: a calm, engineering-document avatar fallback rather than a substitute portrait. */
+/** Personal research portfolio style: a calm, engineering-document avatar fallback rather than a substitute portrait. */
 import { useState } from "react";
 import { profile } from "@/data/profile";
 

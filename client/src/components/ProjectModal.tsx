@@ -1,4 +1,4 @@
-/** Signal Ledger style: a focused project dossier that only renders public, verified details. */
+/** Personal research portfolio style: a focused project dossier that only renders public, verified details. */
 import { ArrowUpRight, X } from "lucide-react";
 import { useEffect } from "react";
 import type { Project } from "@/data/projects";

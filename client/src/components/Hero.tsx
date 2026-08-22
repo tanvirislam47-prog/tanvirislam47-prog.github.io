@@ -1,4 +1,4 @@
-/** Signal Ledger style: asymmetric document-and-margin hero with measured technical atmosphere and evidence-first copy. */
+/** Personal research portfolio style: asymmetric document-and-margin hero with measured technical atmosphere and evidence-first copy. */
 import { ArrowDownRight, Download, Github, LoaderCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "@/data/profile";
@@ -16,8 +16,9 @@ export function Hero() {
       <div className="hero-grid">
         <div className="hero-copy">
           <p className="section-kicker"><span>00</span>{profile.eyebrow}</p>
-          <h1 id="hero-title">Exploring <em>secure intelligence</em> across networks, systems, and communication.</h1>
-          <p className="hero-bio">{profile.bio}</p>
+          <h1 id="hero-title">AI/ML, <em>Cybersecurity</em> &amp; Intelligent Communication</h1>
+          <p className="hero-subheading">B.Sc. in Information and Communication Engineering at Bangladesh University of Professionals</p>
+          <p className="hero-bio">Exploring research-driven applications of AI/ML, cybersecurity, intelligent networks, IoT security, and communication systems.</p>
           <div className="hero-actions">
             <a className="button-primary" href="#projects">Review selected work <ArrowDownRight size={17} /></a>
             {cvState === "available" ? <a className="button-secondary" href={profile.cvPath} download><Download size={16} /> Download CV</a> : <button className="button-secondary is-disabled" disabled>{cvState === "checking" ? <LoaderCircle className="animate-spin" size={16} /> : <Download size={16} />} {cvState === "checking" ? "Checking CV" : "CV to be added"}</button>}

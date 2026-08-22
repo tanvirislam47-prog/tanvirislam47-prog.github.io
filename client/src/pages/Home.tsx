@@ -1,4 +1,4 @@
-/** Signal Ledger style: technical editorialism, asymmetrical reading rhythm, evidence before ornament. */
+/** Personal research portfolio style: technical editorialism, asymmetrical reading rhythm, evidence before ornament. */
 import { ArrowUpRight, ExternalLink, Github, Mail, MapPin, Network, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
@@ -23,7 +23,7 @@ export default function Home() {
       <Navbar />
       <aside className="identity-rail" aria-label="Portfolio identity">
         <div className="rail-mark"><img src="/manus-storage/tlr-signal-monogram_81d4202a.png" alt="TLR signal monogram" /></div>
-        <div className="rail-name"><span>Md. Tanvir</span><strong>Islam Riyad</strong></div>
+        <div className="rail-name"><span>Md. Tanvir</span><strong>Islam Riyad</strong><em>Research Portfolio</em></div>
         <p className="rail-role">B.SC. ICE / BUP<br />RESEARCH-ORIENTED</p>
         <div className="rail-status"><i aria-hidden="true" /> <span>EXPLORING / ACTIVE</span></div>
         <div className="rail-rule" aria-hidden="true" />

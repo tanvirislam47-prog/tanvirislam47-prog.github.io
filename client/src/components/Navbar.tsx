@@ -1,4 +1,4 @@
-/** Signal Ledger style: a compact, sticky document index with clear state and minimal motion. */
+/** Personal research portfolio style: a compact, sticky document index with clear state and minimal motion. */
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "@/data/profile";
@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="nav-inner">
         <button className="brand-mark" onClick={() => navigate("home")} aria-label="Back to top">
           <img src="/manus-storage/tlr-signal-monogram_81d4202a.png" alt="" />
-          <span className="hidden sm:block">{profile.name.split(" ").slice(-2).join(" ")}</span>
+          <span className="hidden sm:block">{profile.name.split(" ").slice(-2).join(" ")} — Research Portfolio</span>
         </button>
         <nav className="nav-links" aria-label="Main navigation">
           {navItems.map(([label, id]) => <button key={id} onClick={() => navigate(id)} className={active === id ? "is-active" : ""}>{label}</button>)}

@@ -1,4 +1,4 @@
-/** Signal Ledger style: compact technical labels, editorial hierarchy, restrained blue signal accents. */
+/** Personal research portfolio style: compact technical labels, editorial hierarchy, restrained blue signal accents. */
 type SectionHeadingProps = {
   index: string;
   label: string;

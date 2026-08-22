@@ -19,7 +19,6 @@ My current interests connect **AI/ML and cybersecurity** with network security, 
 | [AI-Based Network Intrusion Detection & Security Monitoring](https://github.com/tanvirislam47-prog/ai-nids-security-monitor) | AI-based batch network intrusion detection and security monitoring using UNSW-NB15, machine learning, and Django. |
 | [UAV Quantum Communication Security Simulator](https://github.com/tanvirislam47-prog/uav-quantum-communication-security-simulator) | Simulation-based UAV quantum communication security simulator with BB84 QKD, attack analysis, ML security evaluation, and security-aware multi-hop routing. |
 | [SmartBank AI Banking Support](https://github.com/tanvirislam47-prog/smartbank-ai-banking-support) | AI-powered banking support system combining Django, NLP, fraud detection, cybersecurity monitoring, and financial analytics. |
-| [University Event & Community Management System](https://github.com/tanvirislam47-prog/university-event-community-management-system) | Development-ready framework for a University Event & Community Management System. |
 
 ## Technical Toolkit
 

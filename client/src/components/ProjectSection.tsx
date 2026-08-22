@@ -1,4 +1,4 @@
-/** Signal Ledger style: project work is presented as evidence, with disciplined metadata and progressive disclosure. */
+/** Personal research portfolio style: project work is presented as evidence, with disciplined metadata and progressive disclosure. */
 import { ArrowUpRight, ChevronDown, Github, LoaderCircle, Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { featuredProjects, inferProjectCategory, type Project, type ProjectCategory } from "@/data/projects";
