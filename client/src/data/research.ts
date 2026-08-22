@@ -1,39 +1,30 @@
-import { BrainCircuit, Network, Orbit, RadioTower, ShieldCheck, Waypoints, Wifi } from "lucide-react";
+import { BrainCircuit, RadioTower, ShieldCheck, Waypoints, Wifi } from "lucide-react";
 
+/** Centralized research-direction content: current interests, not completed research claims. */
 export const researchInterests = [
   {
-    title: "Machine Learning",
-    description: "Exploring practical machine-learning methods for data-driven and security-aware systems.",
+    title: "AI & ML",
+    description: "Machine Learning and Deep Learning for intelligent systems.",
     icon: BrainCircuit,
   },
   {
-    title: "Deep Learning",
-    description: "Learning deep-learning foundations and their potential for complex detection and classification tasks.",
-    icon: Orbit,
-  },
-  {
-    title: "AI-based Cybersecurity",
-    description: "Interested in using AI/ML to support threat detection, monitoring, and security analysis.",
+    title: "Cybersecurity",
+    description: "Network security, intelligent threat detection, and secure systems.",
     icon: ShieldCheck,
   },
   {
-    title: "Network Security",
-    description: "Studying network threats, intrusion detection, and the design of dependable connected systems.",
-    icon: Network,
-  },
-  {
     title: "IoT Security",
-    description: "Exploring security considerations for constrained, distributed, and device-connected environments.",
+    description: "ML-driven and resource-aware security for connected devices.",
     icon: Wifi,
   },
   {
-    title: "Intelligent Communication Systems",
-    description: "Interested in communication systems that combine adaptable intelligence with robust system design.",
+    title: "Intelligent Communication",
+    description: "Intelligent communication and networked systems.",
     icon: RadioTower,
   },
   {
     title: "Quantum Communication",
-    description: "Learning about quantum communication concepts and security-oriented communication research directions.",
+    description: "Quantum communication and emerging secure communication technologies.",
     icon: Waypoints,
   },
 ];

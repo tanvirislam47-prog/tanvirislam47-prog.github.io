@@ -33,7 +33,7 @@ export default function Home() {
         <Hero />
 
         <section id="about" className="content-section about-section">
-          <SectionHeading index="01" label="profile" title="A developing practice at the intersection of intelligent systems and security." intro="An academically grounded profile designed for research collaboration, technical discussion, and long-term documentation." align="split" />
+          <SectionHeading index="01" label="profile" title="Research-oriented learning at the intersection of intelligence, security, and communication." intro="An academically grounded profile for research collaboration, technical discussion, and long-term documentation." align="split" />
           <div className="about-layout">
             <div className="about-statement"><p>I am pursuing a B.Sc. in Information and Communication Engineering at <strong>Bangladesh University of Professionals</strong>. My interests connect AI/ML, cybersecurity, network and IoT security, communication systems, and software development through the umbrella of <em>{profile.umbrella}</em>.</p><button className="text-link" onClick={() => setAboutExpanded((value) => !value)}>{aboutExpanded ? "Show concise profile" : "Read profile context"} <ArrowUpRight size={15} /></button>{aboutExpanded && <p className="about-reveal">This portfolio documents areas of exploration and public work without overstating credentials. It is structured to grow with future project documentation, publications, academic milestones, and research activity.</p>}</div>
             <dl className="credential-list"><div><dt>Programme</dt><dd>{profile.degree}</dd></div><div><dt>Institution</dt><dd>{profile.university}</dd></div><div><dt>Expected graduation</dt><dd>{profile.graduation}</dd></div><div><dt>Location</dt><dd>{profile.location}</dd></div></dl>
@@ -41,8 +41,8 @@ export default function Home() {
         </section>
 
         <section id="research" className="content-section research-section">
-          <SectionHeading index="02" label="research interests" title="Questions worth exploring." intro="Focused areas that connect present learning with a future research direction in secure intelligent networked systems." align="split" />
-          <div className="research-layout"><div className="research-intro-panel"><div className="research-symbol"><Network size={28} /></div><p>Primary direction</p><h3>AI/ML + Cybersecurity</h3><span>Secondary: Network & IoT Security</span><span>Expansion: Intelligent & Quantum Communication</span></div><div className="research-card-grid">{researchInterests.map((interest, index) => { const Icon = interest.icon; return <article key={interest.title} className="research-card"><span>0{index + 1}</span><Icon size={20} /><h3>{interest.title}</h3><p>{interest.description}</p></article>; })}</div></div>
+          <SectionHeading index="02" label="research focus" title="Questions worth exploring." intro="Five connected directions that frame present learning and a future research pathway in secure intelligent systems." align="split" />
+          <div className="research-layout"><div className="research-intro-panel"><div className="research-symbol"><Network size={28} /></div><p>Primary direction</p><h3>AI/ML × Cybersecurity × Communication</h3><span>Secure, intelligent, and networked systems</span><span>Research interests, not completed claims</span></div><div className="research-card-grid">{researchInterests.map((interest, index) => { const Icon = interest.icon; return <article key={interest.title} className="research-card"><span>0{index + 1}</span><Icon size={20} /><h3>{interest.title}</h3><p>{interest.description}</p></article>; })}</div></div>
         </section>
 
         <section id="skills" className="content-section skills-section">
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="contact-grid"><div><p className="section-kicker"><span>10</span>contact</p><h2>Open to thoughtful technical conversations.</h2><p>Interested in research collaboration, technical projects, or academic opportunities? The public GitHub profile is the active point of contact while additional channels are added.</p></div><div className="contact-links"><a href={profile.githubUrl} target="_blank" rel="noreferrer"><span><Github size={17} /> GitHub</span><ArrowUpRight size={17} /></a><PlaceholderLink label="Email" icon={Mail} /><PlaceholderLink label="Google Scholar" icon={ExternalLink} /><PlaceholderLink label="ResearchGate" icon={ExternalLink} /><PlaceholderLink label="Facebook" icon={ExternalLink} /></div></div>
         </section>
       </main>
-      <footer className="site-footer"><div><img src="/assets/images/tlr-signal-monogram.webp" alt="" /><span>{profile.name}</span></div><p>{profile.degree}<br />{profile.university}</p><p className="footer-location"><MapPin size={14} /> {profile.location}</p><p>© {new Date().getFullYear()}</p></footer>
+      <footer className="site-footer"><div><img src="/assets/images/tlr-signal-monogram.webp" alt="" /><span>{profile.name}</span></div><p>{profile.degree}<br />{profile.university}</p><p className="footer-location"><MapPin size={14} /> {profile.location}</p><nav className="footer-nav" aria-label="Footer navigation"><a href={profile.githubUrl} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={12} /></a><a href="#home">Portfolio</a><a href="#home">Back to top ↑</a></nav><p>© {new Date().getFullYear()}</p></footer>
     </div>
   );
 }

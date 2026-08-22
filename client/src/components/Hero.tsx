@@ -18,20 +18,20 @@ export function Hero() {
           <p className="section-kicker"><span>00</span>{profile.eyebrow}</p>
           <h1 id="hero-title">AI/ML, <em>Cybersecurity</em> &amp; Intelligent Communication</h1>
           <p className="hero-subheading">B.Sc. in Information and Communication Engineering at Bangladesh University of Professionals</p>
-          <p className="hero-bio">Exploring research-driven applications of AI/ML, cybersecurity, intelligent networks, IoT security, and communication systems.</p>
+          <p className="hero-bio">I am a B.Sc. student in Information and Communication Engineering at Bangladesh University of Professionals, exploring research-driven applications of AI/ML, cybersecurity, intelligent networks, IoT security, and emerging communication systems.</p>
           <div className="hero-actions">
-            <a className="button-primary" href="#projects">Review selected work <ArrowDownRight size={17} /></a>
+            <a className="button-primary" href="#research">Explore research <ArrowDownRight size={17} /></a>
             {cvState === "available" ? <a className="button-secondary" href={profile.cvPath} download><Download size={16} /> Download CV</a> : <button className="button-secondary is-disabled" disabled>{cvState === "checking" ? <LoaderCircle className="animate-spin" size={16} /> : <Download size={16} />} {cvState === "checking" ? "Checking CV" : "CV to be added"}</button>}
           </div>
           <div className="hero-metadata" aria-label="Profile metadata">
             <div><span>Based in</span><strong>{profile.location}</strong></div>
             <div><span>Study</span><strong>ICE · BUP</strong></div>
-            <div><span>Focus</span><strong>AI/ML + Security</strong></div>
+            <div><span>Focus</span><strong>AI/ML · Security · Communication</strong></div>
           </div>
         </div>
         <aside className="hero-profile-card">
           <ProfileImage className="hero-profile-image" />
-          <div className="profile-caption"><span>ICE / BUP</span><strong>Developing researcher & engineer</strong></div>
+          <div className="profile-caption"><span>ICE / BUP</span><strong>Emerging researcher in communication systems</strong></div>
           <a className="profile-github" href={profile.githubUrl} target="_blank" rel="noreferrer"><Github size={15} /> github.com/{profile.githubUsername}</a>
         </aside>
       </div>
