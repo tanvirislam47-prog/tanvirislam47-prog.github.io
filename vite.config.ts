@@ -206,6 +206,8 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
+  // Signal Ledger deployment: use relative asset paths when GitHub Actions builds the static site for Pages.
+  base: process.env.GITHUB_ACTIONS ? "./" : "/",
   plugins,
   resolve: {
     alias: {
