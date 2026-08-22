@@ -1,78 +1,106 @@
 # Md. Tanvir Islam Riyad — Research Portfolio
 
-A dark-first, research-oriented personal portfolio built to document a developing practice in **AI/ML, cybersecurity, network security, IoT security, and intelligent communication systems**. The site uses a custom **technical-editorial research portfolio** visual system: disciplined hierarchy, quiet blue signal accents, and a data-driven architecture that can grow with public projects and research work.
+This repository contains a static React portfolio for **Md. Tanvir Islam Riyad**, built for independent deployment at the root domain **`https://tanvirislam47-prog.github.io/`**. It uses a dark technical-editorial design, public GitHub repository discovery, centralized editable profile data, and no required managed-hosting assets.
 
-> The portfolio deliberately distinguishes **interests and exploration** from verified achievements. It does not invent publications, awards, credentials, or project outcomes.
+> The repository intentionally distinguishes documented interests from credentials. It contains no invented publications, awards, achievements, results, screenshots, or contact links.
 
-## Technology Stack
+## Technology and Build Output
 
-| Area | Technology |
+| Area | Implementation |
 | --- | --- |
 | Frontend | React 19, TypeScript, Vite |
-| Styling | Tailwind CSS 4 with a custom CSS design system |
+| Styling | Tailwind CSS 4 and custom CSS |
 | Icons | Lucide React |
-| Public project data | GitHub REST API, accessed client-side without credentials |
-| Static hosting | GitHub Pages workflow included |
+| Repository discovery | Public GitHub REST API, without credentials |
+| Production output | `dist/public` |
+| Hosting target | GitHub Pages root domain |
 
 ## Local Development
 
-Install dependencies and start the development server:
+Use Node.js 22 and pnpm 10.
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Run a type check and create a production build:
+Run the static build intended for GitHub Pages:
 
 ```bash
 pnpm check
-pnpm build
+pnpm run build:pages
 ```
 
-## Content Configuration
+The resulting static site is written to `dist/public`.
 
-All owner-specific content is centralized under `client/src/data/`. This prevents personal information from being duplicated across components.
+## Asset Structure
 
-| File | Purpose |
+All required decorative visuals are committed in the repository, under `client/public/assets/images/`. These files are served from the root domain through stable public paths.
+
+```text
+client/public/
+├── profile.jpg                         # Owner-provided, optional
+├── cv.pdf                              # Owner-provided, optional
+└── assets/
+    └── images/
+        ├── research-hero.webp
+        ├── network-research-panel.webp
+        ├── research-timeline-texture.webp
+        └── tlr-signal-monogram.webp
+```
+
+The profile component expects `client/public/profile.jpg`, available in the site as `/profile.jpg`. If it is absent, the professional initials-based fallback remains in place. The CV action expects `client/public/cv.pdf`, available as `/cv.pdf`; it remains disabled until a real file is added.
+
+## Content Maintenance
+
+Personal content is centralized in `client/src/data/` so changes do not require edits across page components.
+
+| File | Update here |
 | --- | --- |
-| `profile.ts` | Owner information, bio, social URLs, CV path, profile-photo path, and GitHub username |
-| `projects.ts` | Curated featured projects, verified case-study details, and repository categorization |
-| `research.ts` | Research-interest cards and currently-exploring topics |
+| `profile.ts` | Name, bio, profile image, CV path, email, Scholar, ResearchGate, Facebook, and GitHub username |
+| `projects.ts` | Curated featured repositories, public project details, future screenshots, and categories |
+| `research.ts` | Research interests and currently exploring topics |
 | `skills.ts` | Technical toolkit categories |
-| `timeline.ts` | Research and academic journey entries |
-| `publications.ts` | Future public publication records |
-| `achievements.ts` | Future verified achievements |
+| `timeline.ts` | Research Journey entries, including planned and expected markers |
+| `publications.ts` | Publicly released publication records only |
+| `achievements.ts` | Verified awards, competitions, certifications, and milestones only |
 
-### Add or Update a Project
+### Add a Profile Photo, CV, or Social Link
 
-For a prominent project, add or edit an object in `featuredProjects` inside `client/src/data/projects.ts`. Include only information supported by the repository or other publicly verifiable material. The optional `caseStudy` fields are designed for documented overview, objective, approach, technologies, dataset, methodology, verified features, and non-assertive future scope.
+Add a real `profile.jpg` and/or `cv.pdf` to `client/public/`. Then replace the relevant `null` values in `profile.social` within `client/src/data/profile.ts` with the exact real URLs or email address. Do not add placeholders as active links.
 
-The **All project work** panel loads current public repositories directly from the GitHub API. If that request is rate-limited or unavailable, it uses the documented featured-project list as a safe fallback.
+### Add a Project or Project Screenshot
 
-### Add Publications or Achievements
+Only add information that is publicly documented in the relevant repository. Add the repository to `featuredProjects` in `client/src/data/projects.ts`, and include a `caseStudy` only where the project documentation supports each field. If a verified screenshot is available, add it under `client/public/assets/images/projects/` and reference it through the optional `screenshot` field:
 
-Add public publication records to the `publications` array, and verified milestones to the `achievements` array. Empty sections remain deliberately restrained until real information is available.
+```ts
+screenshot: {
+  src: "/assets/images/projects/project-name.webp",
+  alt: "Verified interface view of Project Name",
+}
+```
 
-### Add a Profile Photo and CV
+The current portfolio intentionally does not manufacture project screenshots when none are provided.
 
-The page expects a photo at `/profile.jpg` and a CV at `/cv.pdf`. Until the photo is supplied, a professional initials-based visual fallback is rendered; until the CV is supplied, the download action remains disabled.
+## GitHub Pages Setup
 
-For the managed portfolio preview, store large media through the project’s asset workflow rather than committing it to application source. For a separate GitHub Pages repository, add the two owner-supplied files to `client/public/` before deploying.
+This project is configured for a **root-domain user site**, not a `/portfolio/` subdirectory. The Vite base path is `/`, so CSS, JavaScript, visual assets, `/profile.jpg`, and `/cv.pdf` resolve correctly from `https://tanvirislam47-prog.github.io/`.
 
-## GitHub Pages Deployment
+1. Create or use the GitHub repository named exactly **`tanvirislam47-prog.github.io`** under the `tanvirislam47-prog` account.
+2. Push this project to that repository’s `main` branch.
+3. In **Settings → Pages**, set **Source** to **GitHub Actions**.
+4. Push a commit to `main`, or run **Deploy portfolio to GitHub Pages** from the **Actions** tab.
+5. Wait for the workflow to finish. The published site will be available at `https://tanvirislam47-prog.github.io/`.
+6. Visit the live URL, then replace `ADD_GITHUB_PAGES_PORTFOLIO_URL_HERE` in `github-profile-readme.md` with the verified address.
 
-The repository contains `.github/workflows/deploy.yml`, which builds and deploys the static client when changes reach `main`.
+The workflow at `.github/workflows/deploy.yml` installs dependencies, runs `pnpm run build:pages`, uploads `dist/public`, and deploys the artifact using GitHub Pages. No token needs to be embedded in application code.
 
-1. Push this project to a GitHub repository under the intended account.
-2. In the repository’s **Settings → Pages**, select **GitHub Actions** as the deployment source.
-3. Commit and push to the `main` branch, then wait for the **Deploy portfolio to GitHub Pages** workflow to complete.
-4. GitHub will provide the final Pages URL. Add it to `portfolioUrl` in `client/src/data/profile.ts` and replace the portfolio placeholder in `github-profile-readme.md`.
+## Routing and GitHub API Behaviour
 
-### Required Asset Note for GitHub Pages
+The portfolio is a single static document with in-place project detail modals, rather than separate client-side project routes. It is therefore compatible with GitHub Pages refresh behaviour and does not require a 404 redirect workaround.
 
-The managed preview uses generated art served by the managed project asset path. Before deploying the same code independently to GitHub Pages, either replace those visual paths with externally hosted URLs or download/export the generated art and place it in `client/public/assets/`, then update the `/manus-storage/...` references. The application remains readable if those decorative assets are not yet migrated, but this replacement is necessary to preserve the complete visual identity on GitHub Pages.
+The public GitHub repository list uses `https://api.github.com/users/tanvirislam47-prog/repos` without a private token. It has loading, error, rate-limit, empty-result, and manual featured-project fallback states. The site remains useful if the API is temporarily unavailable.
 
-## Accessibility and Quality Checks
+## Final Pre-Deployment Check
 
-The interface uses semantic section landmarks, readable colour contrast, visible keyboard focus, a mobile navigation menu, responsive content reflow, image alternative text, reduced-motion support, and graceful states for missing profile/CV files and GitHub API failure. Before publishing, verify the completed photo, CV, social URLs, and target Pages URL.
+Before pushing, run `pnpm check` and `pnpm run build:pages`. Confirm your real profile photo, CV, and contact/research URLs have been added if you intend to show them publicly. Review the live GitHub Pages URL after the workflow completes, then update the placeholder portfolio link in the GitHub Profile README.

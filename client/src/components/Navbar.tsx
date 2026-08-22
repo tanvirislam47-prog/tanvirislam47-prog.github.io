@@ -30,7 +30,7 @@ export function Navbar() {
     <header className="site-nav">
       <div className="nav-inner">
         <button className="brand-mark" onClick={() => navigate("home")} aria-label="Back to top">
-          <img src="/manus-storage/tlr-signal-monogram_81d4202a.png" alt="" />
+          <img src="/assets/images/tlr-signal-monogram.webp" alt="" />
           <span className="hidden sm:block">{profile.name.split(" ").slice(-2).join(" ")} — Research Portfolio</span>
         </button>
         <nav className="nav-links" aria-label="Main navigation">

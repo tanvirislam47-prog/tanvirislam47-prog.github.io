@@ -22,7 +22,7 @@ export default function Home() {
     <div className="portfolio-shell">
       <Navbar />
       <aside className="identity-rail" aria-label="Portfolio identity">
-        <div className="rail-mark"><img src="/manus-storage/tlr-signal-monogram_81d4202a.png" alt="TLR signal monogram" /></div>
+        <div className="rail-mark"><img src="/assets/images/tlr-signal-monogram.webp" alt="TLR signal monogram" /></div>
         <div className="rail-name"><span>Md. Tanvir</span><strong>Islam Riyad</strong><em>Research Portfolio</em></div>
         <p className="rail-role">B.SC. ICE / BUP<br />RESEARCH-ORIENTED</p>
         <div className="rail-status"><i aria-hidden="true" /> <span>EXPLORING / ACTIVE</span></div>
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="contact-grid"><div><p className="section-kicker"><span>10</span>contact</p><h2>Open to thoughtful technical conversations.</h2><p>Interested in research collaboration, technical projects, or academic opportunities? The public GitHub profile is the active point of contact while additional channels are added.</p></div><div className="contact-links"><a href={profile.githubUrl} target="_blank" rel="noreferrer"><span><Github size={17} /> GitHub</span><ArrowUpRight size={17} /></a><PlaceholderLink label="Email" icon={Mail} /><PlaceholderLink label="Google Scholar" icon={ExternalLink} /><PlaceholderLink label="ResearchGate" icon={ExternalLink} /><PlaceholderLink label="Facebook" icon={ExternalLink} /></div></div>
         </section>
       </main>
-      <footer className="site-footer"><div><img src="/manus-storage/tlr-signal-monogram_81d4202a.png" alt="" /><span>{profile.name}</span></div><p>{profile.degree}<br />{profile.university}</p><p className="footer-location"><MapPin size={14} /> {profile.location}</p><p>© {new Date().getFullYear()}</p></footer>
+      <footer className="site-footer"><div><img src="/assets/images/tlr-signal-monogram.webp" alt="" /><span>{profile.name}</span></div><p>{profile.degree}<br />{profile.university}</p><p className="footer-location"><MapPin size={14} /> {profile.location}</p><p>© {new Date().getFullYear()}</p></footer>
     </div>
   );
 }

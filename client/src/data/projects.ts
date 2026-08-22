@@ -24,6 +24,7 @@ export type Project = {
   language?: string | null;
   stars?: number;
   forks?: number;
+  screenshot?: { src: string; alt: string };
   caseStudy?: CaseStudy;
 };
 
